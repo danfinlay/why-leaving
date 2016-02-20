@@ -1,0 +1,7 @@
+<div class="header" {{action 'toggleCollapse'}}>{{header}}</div>
+
+{{#if expanded}}
+  <div class="body">
+    {{yield}}
+  </div>
+{{/if}}
