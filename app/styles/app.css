@@ -22,12 +22,6 @@ caption {
   color: #818181;
 }
 
-body > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 article {
   width: 100%;
   color: rgba(0,0,0,.8);
@@ -40,27 +34,51 @@ article {
   letter-spacing: -.003em;
 }
 
+@media (max-width: 600px) {
+  h1, h2, h3 {
+    font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    letter-spacing: -.02em;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 52px;
+    margin-left: -3.25px;
+    line-height: 1.3;
+    letter-spacing: -.03em;
+  }
+
+  article {
+    font-size: 18px;
+  }
+}
+
+body > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 article p {
   padding: 5px;
 }
 
-.collapsable .header {
+.collapsable .header, details > summary {
   background: #EEE;
   cursor: pointer;
+  padding-left: 11px;
 }
-.collapsable .header::before {
+.collapsable > .header::before {
   content: '>';
   text-align: center;
   margin-right: 10px;
   display: inline-block;
-  background: #aaa;
+  background: #DBDBDB;
   width: 35px;
   height: 35px;
 }
-.collapsable.expanded .header::before {
+.collapsable.expanded > .header::before {
   transform: rotate(0.25turn);
 }
-.collapsable {
+.collapsable, details {
   background: #f8f8f8;
   margin: 5px;
   border: 1px solid #d9d9d9;
