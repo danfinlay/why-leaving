@@ -15,6 +15,7 @@ h1, h2, h3 {
 
 a { color: #818181; text-decoration: none; }
 img { width: 100%; padding: 10px 0px 10px 0px; }
+
 caption {
   display: block;
   font-style: italic;
